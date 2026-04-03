@@ -43,12 +43,12 @@ function dw_asset(string $filename): string
     if (file_exists($manifest_path)) {
         $manifest = json_decode(file_get_contents($manifest_path), true);
 
-        if (isset($manifest['wp-content/themes/dw/assets/css/styles.scss']) && $filename === 'css') {
-            return get_theme_file_uri('public/' . $manifest['wp-content/themes/dw/assets/css/styles.scss']['file']);
+        if (isset($manifest['wp-content/themes/portfolio/assets/css/styles.scss']) && $filename === 'css') {
+            return get_theme_file_uri('public/' . $manifest['wp-content/themes/portfolio/assets/css/styles.scss']['file']);
         }
 
-        if (isset($manifest['wp-content/themes/dw/assets/js/main.js']) && $filename === 'js') {
-            return get_theme_file_uri('public/' . $manifest['wp-content/themes/dw/assets/js/main.js']['file']);
+        if (isset($manifest['wp-content/themes/portfolio/assets/css/styles.scss/assets/js/main.js']) && $filename === 'js') {
+            return get_theme_file_uri('public/' . $manifest['wp-content/themes/portfolio/assets/css/styles.scss/assets/js/main.js']['file']);
         }
     }
 
