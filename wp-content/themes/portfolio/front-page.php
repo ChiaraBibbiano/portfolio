@@ -1,3 +1,8 @@
+<?php get_header(); ?>
+
+<?= get_field('title');?>
 
 
-Portfolio pas de buzz
+
+
+<?php get_footer(); ?>

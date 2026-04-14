@@ -1,17 +1,16 @@
 .footer {
-  background-color: #4b86dc;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  padding: 5rem 0 2rem;
+  background-color: black;
+  color: #D2CABF;
+  font-family: 'Termina', Arial, sans-serif;
+  padding: 12.5rem 0 2rem;
 
   @media (max-width: 767px) {
-    padding: 3rem 0 1.5rem;
+    padding: 12.5rem 0 1.5rem;
   }
 
   &__container {
-    width: min(100%, 86rem);
-    margin: 0 auto;
-    padding: 0 2rem;
+    /*width: min(100%, 86rem);*/
+    padding: 0 9.0625rem;
 
     @media (max-width: 767px) {
       padding: 0 1rem;
@@ -20,10 +19,9 @@
 
   &__top {
     display: grid;
-    grid-template-columns: 1.3fr 0.9fr 0.9fr 0.9fr;
-    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
     align-items: start;
-    padding-bottom: 2.5rem;
+    padding-bottom: 3.75rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
     @media (max-width: 1100px) {
@@ -38,46 +36,11 @@
     }
   }
 
-  &__brand {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  &__logo-link {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  &__logo {
-    display: inline-block;
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
-    line-height: 1;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-  }
-
-  &__socials {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  &__social-item {
-    margin: 0;
-  }
-
-  &__social-link {
+ /* &__social-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #D2CABF;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 700;
@@ -91,23 +54,23 @@
       opacity: 0.8;
       transform: translateY(-1px);
     }
-  }
+  }*/
 
   &__nav,
   &__infos,
   &__utils {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
   &__title {
     margin: 0;
-    color: #fff;
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
+    color: #D2CABF;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.5;
+
 
     @media (max-width: 767px) {
       font-size: 1.35rem;
@@ -121,14 +84,14 @@
   }
 
   &__item + &__item {
-    margin-top: 0.9rem;
+    margin-top: 0.5625rem;
   }
 
   &__link,
   &__legal-link {
-    color: rgba(255, 255, 255, 0.95);
+    color: #D2CABF;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     transition: opacity 0.25s ease;
@@ -150,17 +113,18 @@
   &__address {
     display: flex;
     flex-direction: column;
-    gap: 0.45rem;
+    gap: 0.5625rem;
     margin: 0;
     font-style: normal;
   }
 
   &__text {
     margin: 0;
-    color: rgba(255, 255, 255, 0.95);
-    font-size: 1.2rem;
+    color: #D2CABF;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
+    text-decoration: none;
 
     @media (max-width: 767px) {
       font-size: 1.05rem;
@@ -195,14 +159,13 @@
   }
 
   &__legal-separator {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.2rem;
-    line-height: 1;
+    font-size: 1rem;
+
   }
 
   &__copyright {
     margin: 0;
-    color: rgba(255, 255, 255, 0.95);
+    color: #D2CABF;
     font-size: 1.1rem;
     font-weight: 400;
     line-height: 1.4;
