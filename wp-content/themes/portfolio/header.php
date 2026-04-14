@@ -8,6 +8,7 @@
     <title><?= get_the_title() ?> - Wordpress Demo 201></title>
     <link rel="stylesheet" type="text/css" href="<?= dw_asset('css'); ?>">
     <script src="<?= dw_asset('js') ?>" defer></script>
+    <link rel="stylesheet" href="https://use.typekit.net/xro0woe.css">
 </head>
 <body>
 <h1 class="sro"><?= get_the_title() ?></h1>
