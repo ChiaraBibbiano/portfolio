@@ -70,6 +70,7 @@
     font-size: 1.75rem;
     font-weight: 600;
     line-height: 1.5;
+    text-transform: uppercase;
 
 
     @media (max-width: 767px) {
@@ -170,10 +171,7 @@
     font-weight: 400;
     line-height: 1.4;
     text-align: right;
-
-    strong {
-      font-weight: 700;
-    }
+    
 
     @media (max-width: 767px) {
       text-align: left;
