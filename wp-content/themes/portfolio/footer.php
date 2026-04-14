@@ -55,7 +55,7 @@ $social = dw_get_navigation_links('social-media');
         </div>
         <div class="footer__bottom">
             <p class="footer__copyright">
-                ©2026 BIBBIANO CHIARA. Tous droits réservés. Créé par BIBBIANO CHIARA
+                ©2026 BIBBIANO CHIARA. Tous droits réservés.
             </p>
             <ul class="footer__legal" role="list">
                 <li class="footer__legal-item">
