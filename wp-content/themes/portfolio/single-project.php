@@ -1,10 +1,5 @@
-<?php
-/*
- * Template Name: About
- */
-?>
-
 <?php get_header(); ?>
+ <?= get_the_title();?>
 
 
 

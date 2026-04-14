@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Project
+ * Template Name: Legal notice
  */
 ?>
 <?php get_header(); ?>
