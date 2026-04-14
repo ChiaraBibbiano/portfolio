@@ -64,7 +64,31 @@ function __hepl(string $translation): ?string
     return __($translation, 'hepl-trad');
 }
 
+add_theme_support('post-thumbnails');
 
+
+register_post_type('project', [
+    'label' => 'Mes projets',
+    'description' => 'Mes projets perso',
+    'menu_position' => 2,
+    'menu_icon' => 'dashicons-welcome-learn-more',
+    'public' => true,
+    'has_archive' => true,
+    'supports' => ['title', 'excerpt', 'thumbnail'],
+    'rewrite' => [
+        'slug' => 'projets'
+    ],
+]);
+
+register_taxonomy('type', 'project', [
+    'hierarchical' => true,
+    'labels' => [
+        'name' => 'Le type de projet'
+    ],
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+]);
 
 
 
