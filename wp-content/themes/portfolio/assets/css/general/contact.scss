@@ -1,0 +1,89 @@
+@use 'general' as *;
+.contact {
+  padding: 0 $space-sm;
+
+  @media (min-width: $bp-lp) {
+    padding: 2.94rem 8.529rem 0;
+  }
+
+  &__body {
+    @media (min-width: $bp-lp) {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr; // coords à gauche, form à droite
+      gap: $space-lg;
+      align-items: start;
+    }
+  }
+
+  &__coords {
+    margin-bottom: $space-md;
+
+    @media (min-width: $bp-lp) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__coords-title {
+    font-weight: 600;
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+
+    @media (min-width: $bp-lp) {
+      font-size: 1.65rem;
+      margin-top: 0;
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.wpcf7-form {
+  p {
+    font-weight: 500;
+    margin-bottom: $space-md;
+
+    @media (min-width: $bp-lp) {
+      font-size: 1.18rem;
+      margin-bottom: 2.35rem;
+    }
+  }
+
+  span {
+    border-bottom: 1px solid $color-beige;
+  }
+
+  input, textarea {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+  }
+
+  // Nom + Prénom côte à côte
+  .cf7-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $space-md;
+  }
+
+  // Bouton envoyer
+  input[type="submit"] {
+    width: 100%;
+    background-color: $color-red;
+    color: $color-beige;
+    padding: 1.2rem;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color $transition;
+
+    &:hover {
+      background-color: $color-beige;
+      color: $color-red;
+    }
+  }
+}
