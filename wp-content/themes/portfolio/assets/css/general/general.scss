@@ -1,11 +1,124 @@
+/*mes variables*/
+
+//couleurs
+$color-bg: black;
+$color-red: #B40A2E;
+$color-beige: #D2CABF;
+
+//typo
+$font: 'Termina', Arial, sans-serif;
+
+//tailles de base
+$fs-mobile: 16px;
+$fs-desktop: 17px;
+
+
+//espacements
+$space-xs: 0.5rem; //  8px
+$space-sm: 1rem; // 16px
+$space-md: 2rem; // 32px
+$space-lg: 4rem; // 64px
+$space-xl: 6rem; // 96px
+//desktop
+$page-padding-top-d: 6rem; // 96px apres nav
+$page-padding-side-d: 8.529rem; // le padding pour les bords d'écran desktop
+$page-padding-bottom-d: 11.765rem; // 200px avant footer
+$space-section: 6.471rem; //110px entre les sections
+$space-title: 4.706rem; //80px apres les titres (h2)
+$space-element: 3.529rem5; //60px entre les élements d'une même section
+//mobile
+$page-padding-top-m: 4.375rem; // 70px apres nav et avant footer
+$page-padding-side-m: 1.25rem; // le padding pour les bords d'écran mobile
+$page-padding-bottom-m: 6.471rem; // 110px avant footer
+
+//breakpoints
+$bp-mb: 768px;
+$bp-lp: 1024px;
+$bp-dt: 1280px;
+
+// transitions
+$ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$transition: 0.25s $ease;
+
+
 .sro {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+html {
+  font-size: $fs-mobile;
+
+  @media (min-width: $bp-lp) {
+    font-size: $fs-desktop;
+  }
+}
+
+body {
+  background-color: $color-bg;
+  color: $color-beige;
+  font-family: $font;
+  line-height: 1.6;
+  /*overflow-x: hidden;*/
+}
+
+
+
+.pretitle {
+
+  @media (min-width: $bp-lp) {
+    font-size: 1.412rem;
+  }
+}
+
+.title {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $color-red;
+  font-size: 1.5rem;
+
+  @media (min-width: $bp-lp) {
+    font-size: 1.647rem; // 28px
+    margin-bottom: 4.71rem;
+  }
+}
+.link {
+  position: relative;
+  color: $color-red;
+  font-weight: 600;
+
+  @media (min-width: $bp-lp) {
+    font-size: 1.41rem;
+  }
+
+  &::after {
+    content: '';
     position: absolute;
-    width: 1px;
+    left: 0;
+    bottom: 0;
+    width: 0;
     height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+    background-color: $color-red;
+    transition: width $transition;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &:hover .arrow {
+    transform: translateX(2px) rotate(45deg);
+  }
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform $transition;
 }

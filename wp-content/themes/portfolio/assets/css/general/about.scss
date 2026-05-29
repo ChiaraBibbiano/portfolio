@@ -1,0 +1,249 @@
+@use 'general' as *;
+
+.about {
+  padding: 0 $space-sm;
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+
+  @media (min-width: $bp-lp) {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: $space-lg;
+    align-items: start;
+    padding: 2.94rem 8.529rem 6.47rem;
+  }
+
+  &__picture-wrap {
+    position: relative;
+    width: 100%;
+
+    @media (min-width: $bp-lp) {
+      max-width: 370px;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+
+
+    }
+  }
+
+  //chiara
+  &__picture-label {
+    position: absolute;
+    bottom: 5rem;
+    left: 0;
+    width: 135%;
+
+    img {
+      width: 80%;
+      height: auto;
+      animation: chiara-float 4s ease-in-out infinite;
+      @media (max-width: $bp-lp) {
+        width: 70%;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+    margin-top: 2rem;
+
+    @media (min-width: $bp-lp) {
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+
+    @media (min-width: $bp-lp) {
+      margin-bottom: $space-sm;
+    }
+  }
+
+  &__text {
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  &__identity {
+    margin-top: 6.5rem;
+    text-align: center;
+  }
+
+  &__identity-role {
+    font-weight: 600;
+    text-transform: uppercase;
+
+
+  }
+}
+
+
+@keyframes chiara-float {
+  0%, 100% {
+    transform: translate(-50%, 0) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, 0) translateY(-12px);
+  }
+}
+
+
+
+
+.parcours {
+  padding: $space-lg $space-sm;
+
+  @media (min-width: $bp-lp) {
+    padding: 0 8.529rem;
+  }
+  &__title{
+    margin-bottom: 1.5rem;
+  }
+
+
+  &__timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__cards {
+    padding: 2.35rem 0 1.47rem;
+    border-bottom: 1px solid rgba($color-beige, 0.15);
+
+    @media (min-width: $bp-lp) {
+      display: grid;
+      grid-template-columns: 12rem 1fr;
+      align-items: start;
+      gap: 0 6.94rem;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:first-child {
+      padding-top: inherit;
+    }
+  }
+
+  &__year {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: $color-red;
+    line-height: 129%;
+
+    @media (min-width: $bp-lp) {
+      font-size: 2.82rem;
+      font-weight: 600;
+    }
+    @media (max-width: $bp-lp) {
+      margin-bottom: $space-xs;
+
+    }
+  }
+
+  &__school {
+    text-transform: uppercase;
+    font-weight: 600;
+    @media (max-width: $bp-lp) {
+        font-weight: 500;
+      font-size: .9375rem;
+    }
+  }
+
+  &__option {
+    font-size: 0.875rem;
+    font-weight: 300;
+
+
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.53rem;
+    align-self: center;
+  }
+}
+
+
+
+
+.skills {
+  padding: 0 $space-sm;
+
+  @media (min-width: $bp-lp) {
+    padding: 6.471rem 8.529rem 0;
+  }
+
+  &__header{
+    @media (max-width: $bp-lp) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__track-wrap {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 6.471rem;
+
+    &:hover .skills__track {
+      animation-play-state: paused;
+    }
+    @media (max-width: $bp-lp) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__track {
+    display: flex;
+    gap: 8rem;
+    width: max-content;
+    animation: skills-scroll 20s linear infinite;
+  }
+
+  &__item {
+    width: 4.706rem;  // 80px
+    height: 4.706rem;
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+@keyframes skills-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills__track { animation: none; }
+}

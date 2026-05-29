@@ -1,0 +1,10 @@
+@use 'general' as *;
+
+.error-404 {
+  padding: 0 $space-sm;
+  text-align: center;
+
+  @media (min-width: $bp-lp) {
+    padding: 2.94rem 8.529rem 0;
+  }
+}

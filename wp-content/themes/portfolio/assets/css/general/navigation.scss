@@ -1,100 +1,193 @@
+@use 'general' as *;
+
 .navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 9.0625rem;
-  background-color: black;
-  font-family: 'Termina', Arial, sans-serif;
+  padding: 1.5rem 8.529rem 2.94rem;
+  position: relative;
 
-  @media (max-width: 991px) {
-    padding: 1rem 2rem;
-    gap: 1.5rem;
+  @media (max-width: $bp-lp) { //mobile
+    padding: $space-sm $space-sm $space-md;
   }
 
-  @media (max-width: 767px) {
-    flex-wrap: wrap;
-    padding: 1rem;
-  }
-/*
-  &__title.sro {
-    position: absolute;
-    width: 0.0625rem;
-    height: 0.0625rem;
-    padding: 0;
-    margin: -0.0625rem;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
+  &__logo-name {
+    font-size: 0.824rem;
+    font-weight: 600;
+    color: $color-beige;
+    transition: color $transition;
 
-  &__svg {
-    display: block;
-    width: 15rem;
-    height: auto;
-    flex: 0 0 auto;
-
-    @media (max-width: 991px) {
-      width: 12rem;
+    &:hover {
+      color: $color-red;
     }
+  }
 
-    @media (max-width: 767px) {
-      width: 10.5rem;
-    }
-  }*/
-
-  &__list {
+  &__burger {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 2.5rem;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: $space-xs;
+    z-index: 110;
+
+    span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background-color: $color-beige;
+      transition: transform $transition, opacity $transition;
+    }
+
+    // animation croix
+    &[aria-expanded="true"] {
+      span:nth-child(1) {
+        transform: translateY(6.5px) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: translateY(-6.5px) rotate(-45deg);
+      }
+    }
+
+    @media (min-width: $bp-lp) {
+      display: none; // caché desktop
+    }
+  }
+
+
+  //nav caché sur desktop
+  &__list {
+    display: none;
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
-    flex: 1 1 auto;
 
-    @media (max-width: 991px) {
-      gap: 1.5rem;
-    }
-
-    @media (max-width: 767px) {
-      width: 100%;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      gap: 1rem;
+    @media (min-width: $bp-lp) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 2.5rem;
+      flex: 1 1 auto;
     }
   }
 
-  &__list-item {
-    list-style: none;
-  }
+
+  &__link,
   &__link-language {
-    text-decoration: none;
-    color: black;
-    line-height: 1.3;
-    font-weight: 400;
-    color: #D2CABF;
-  }
-
-  &__link {
     position: relative;
     display: inline-flex;
-    align-items: center;
-    color: #D2CABF;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.3;
-    text-decoration: none;
-    transition: color 0.25s ease;
+    padding-bottom: 0.18rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      font-weight: 600;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: $color-red;
+      transition: width $transition;
+    }
 
     &:hover,
     &:focus-visible {
-      color: #0a3261;
+      font-weight: 600;
     }
 
-    &.current-menu-item,
-    &[aria-current='page'] {
-      font-weight: 700;
+    &:hover::after,
+    &:focus-visible::after {
+      width: 100%;
     }
+
+    &--active,
+    &[aria-current="page"] {
+      font-weight: 600;
+    }
+
+    &--active::after,
+    &[aria-current="page"]::after {
+      width: 100%;
+    }
+  }
+
+  &__link-language {
+    font-size: 0.7rem;
+    opacity: 0.6;
+    transition: opacity $transition;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__list-item-language--active {
+    .navigation__link-language {
+      opacity: 1;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+.nav-mobile {
+  padding: 4.375rem $space-sm;
+  position: fixed;
+  inset: 0;
+  background-color: $color-bg;
+  z-index: 99;
+  display: flex;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.77, 0, 0.18, 1);
+
+  &--open {
+    transform: translateX(0);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__link {
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 0.18rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: 0;
+      width: 0; height: 1px;
+      background-color: $color-red;
+      transition: width $transition;
+    }
+
+    &:focus-visible {
+      font-weight: 600;
+
+      &::after { width: 100%; }
+    }
+
+    &--active,
+    &[aria-current="page"] {
+      font-weight: 600;
+
+      &::after { width: 100%; }
+    }
+  }
+
+  @media (min-width: $bp-lp) {
+    display: none;
   }
 }

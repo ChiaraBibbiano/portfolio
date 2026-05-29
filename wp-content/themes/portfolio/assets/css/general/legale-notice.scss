@@ -1,0 +1,25 @@
+@use 'general' as *;
+
+.legal{
+  padding: 0 $space-sm;
+  @media (min-width: $bp-lp) {
+    padding: 2.94rem 8.529rem 0;
+  }
+
+  &__header{
+    @media (max-width: $bp-lp) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  strong{
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+
+    font-size: 1.25rem;
+    @media (min-width: $bp-lp) {
+      font-size: 1.18rem;
+      line-height: 3;
+    }
+  }
+}

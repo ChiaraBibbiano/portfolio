@@ -62,14 +62,14 @@
     width: 100%;
   }
 
-  // Nom + Prénom côte à côte
+
   .cf7-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: $space-md;
   }
 
-  // Bouton envoyer
+
   input[type="submit"] {
     width: 100%;
     background-color: $color-red;
