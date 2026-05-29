@@ -47,8 +47,8 @@ function dw_asset(string $filename): string
             return get_theme_file_uri('public/' . $manifest['wp-content/themes/portfolio/assets/css/styles.scss']['file']);
         }
 
-        if (isset($manifest['wp-content/themes/portfolio/assets/css/styles.scss/assets/js/main.js']) && $filename === 'js') {
-            return get_theme_file_uri('public/' . $manifest['wp-content/themes/portfolio/assets/css/styles.scss/assets/js/main.js']['file']);
+        if (isset($manifest['wp-content/themes/portfolio/assets/js/main.js']) && $filename === 'js') {
+            return get_theme_file_uri('public/' . $manifest['wp-content/themes/portfolio/assets/js/main.js']['file']);
         }
     }
 
@@ -73,10 +73,10 @@ register_post_type('project', [
     'menu_position' => 2,
     'menu_icon' => 'dashicons-welcome-learn-more',
     'public' => true,
-    'has_archive' => true,
-    'supports' => ['title', 'excerpt', 'thumbnail'],
+    'has_archive' => false,
+    'supports' => ['title', 'thumbnail'],
     'rewrite' => [
-        'slug' => 'projets'
+        'slug' => 'mes-créations'
     ],
 ]);
 
@@ -90,6 +90,16 @@ register_taxonomy('type', 'project', [
     'query_var' => true,
 ]);
 
+//taille image photo de moi
+add_image_size( 'portrait', 370, 400, true );
+
+
+//autorisé svg sur wp
+function allow_svg_upload( $mimes ) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter( 'upload_mimes', 'allow_svg_upload' );
 
 
 

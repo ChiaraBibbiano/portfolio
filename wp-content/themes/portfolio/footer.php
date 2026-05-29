@@ -2,13 +2,12 @@
 $footer = dw_get_navigation_links('footer');
 $social = dw_get_navigation_links('social-media');
 ?>
-
+</main>
 <footer class="footer">
     <div class="footer__container">
         <div class="footer__top">
             <div class="footer__infos">
                 <h2 class="footer__title">Coordonnées</h2>
-
                 <address class="footer__address">
                     <?php if (!empty($phone_number)): ?>
                         <a class="footer__link footer__link--contact" href="<?= $phone_number['url']; ?>">
@@ -23,9 +22,9 @@ $social = dw_get_navigation_links('social-media');
                             <?= get_field($contact_mail); ?>
                         </a>
                     <?php else: ?>
-                        <a class="footer__text" href="chiara.bibbiano@student.hepl.be">chiara.bibbiano@student.hepl.be</a>
+                        <a class="footer__text"
+                           href="mailto:chiara.bibbiano@student.hepl.be">chiara.bibbiano@student.hepl.be</a>
                     <?php endif; ?>
-
                     <p class="footer__text">Belgique,</p>
                     <p class="footer__text">Liège</p>
                 </address>
@@ -46,7 +45,7 @@ $social = dw_get_navigation_links('social-media');
                     <ul class="footer__list" role="list">
                         <?php foreach ($social as $link) : ?>
                             <li class="footer__item">
-                                <a class="footer__link" href="<?= $link->href ?>"><?= $link->label ?></a>
+                                <a class="footer__link" href="<?= $link->href ?>" target="_blank"><?= $link->label ?></a>
                             </li>
                         <?php endforeach; ?>
                     </ul>
@@ -59,7 +58,7 @@ $social = dw_get_navigation_links('social-media');
             </p>
             <ul class="footer__legal" role="list">
                 <li class="footer__legal-item">
-                    <a class="footer__legal-link" href="#">Mentions légales</a>
+                    <a class="footer__legal-link" href="<?= esc_url( home_url('/mentions-legales') ); ?>">Mentions légales</a>
                 </li>
             </ul>
         </div>
