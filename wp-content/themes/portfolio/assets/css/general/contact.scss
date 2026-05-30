@@ -41,49 +41,85 @@
   }
 }
 
-.wpcf7-form {
-  p {
-    font-weight: 500;
-    margin-bottom: $space-md;
+  .wpcf7-form {
 
-    @media (min-width: $bp-lp) {
-      font-size: 1.18rem;
-      margin-bottom: 2.35rem;
+    p {
+      font-weight: 500;
+      margin-bottom: $space-md;
+
+      @media (min-width: $bp-lp) {
+        font-size: 1.18rem;
+        margin-bottom: 2.35rem;
+      }
     }
-  }
 
-  span {
-    border-bottom: 1px solid $color-beige;
-  }
+    .wpcf7-form-control-wrap {
+      border-bottom: 1px solid $color-beige;
+    }
 
-  input, textarea {
-    background-color: transparent;
-    border: none;
-    width: 100%;
-  }
+    input, textarea {
+      background-color: transparent;
+      border: none;
+      width: 100%;
+      color: $color-beige;
 
-
-  .cf7-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: $space-md;
-  }
+    }
 
 
-  input[type="submit"] {
-    width: 100%;
-    background-color: $color-red;
-    color: $color-beige;
-    padding: 1.2rem;
-    font-size: 1rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color $transition;
+    .cf7-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: $space-md;
+    }
+    .star{
+      color: $color-red;
+    }
 
-    &:hover {
-      background-color: $color-beige;
+
+    input[type="submit"] {
+      width: 100%;
+      background-color: $color-red;
+      color: $color-beige;
+      padding: 1.2rem;
+      font-weight: $font;
+      font-size: 1rem;
+      letter-spacing: .06rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color $transition;
+
+      &:hover {
+        background-color: $color-beige;
+        color: $color-red;
+      }
+    }
+
+    // ── Erreur validation ────────────────────────────────────────────────────
+    .wpcf7-not-valid-tip {
+      font-size: 0.65rem;
+      color: $color-red;
+      margin-top: 0.25rem;
+      display: block;
+    }
+
+    // ── Messages réponse ─────────────────────────────────────────────────────
+    .wpcf7-response-output {
+      font-size: 0.75rem;
+      padding: $space-sm;
+      margin-top: $space-sm;
+      border: none;
+      border-radius: 2px;
+    }
+
+    &.sent .wpcf7-response-output {
+      background-color: rgba(39, 174, 96, 0.1);
+      color: #27ae60;
+    }
+
+    &.invalid .wpcf7-response-output,
+    &.failed .wpcf7-response-output {
+      background-color: rgba($color-red, 0.1);
       color: $color-red;
     }
   }
-}
+
