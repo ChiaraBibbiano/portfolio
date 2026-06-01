@@ -12,3 +12,5 @@ wp-content/themes/portfolio/public/*
 !vite.config.js
 !package.json
 !postcss.config.js
+!wp-content/themes/portfolio/locales/
+!wp-content/themes/portfolio/locales/*

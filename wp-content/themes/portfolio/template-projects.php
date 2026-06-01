@@ -93,7 +93,7 @@ get_header(); ?>
                  title="<?= __hepl('Vers la page précédente') ?>"><?= get_previous_posts_link(__hepl('<span class="link">Précédent</span>'), $projects->max_num_pages); ?>
             </div>
             <div class="pagination__next "
-                 title="<?= __hepl('Vers la page suivante') ?>"><?= get_next_posts_link(__hepl('<span class="link">Suivant</span>'), $projects->max_num_pages); ?>
+                 title="<?= __e('Vers la page suivante') ?>"><?= get_next_posts_link(__hepl('<span class="link">Suivant</span>'), $projects->max_num_pages); ?>
             </div>
         </nav>
     <?php endif; ?>
