@@ -2,12 +2,13 @@
 
 .projects {
 
-  &__filters{
+  &__filters {
     margin-bottom: $space-xs;
     @media (min-width: $bp-lp) {
       margin-bottom: 4.706rem;
     }
   }
+
   &__filtre {
     display: inline-flex;
     padding: 10px 20px;
@@ -17,9 +18,9 @@
     margin-right: $space-xs;
     cursor: pointer;
     transition: background-color $transition, border-color $transition;
-     @media (max-width: $bp-lp) {
-       margin-bottom: 1.5rem;
-     }
+    @media (max-width: $bp-lp) {
+      margin-bottom: 1.5rem;
+    }
 
     &:hover {
       background-color: $color-red;
@@ -48,17 +49,24 @@
   &__card2 {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
 
     @media (min-width: $bp-lp) {
       &:nth-child(1) .project-card__thumb,
-      &:nth-child(3) .project-card__thumb {
+      &:nth-child(3) .project-card__thumb,
+      &:nth-child(4) .project-card__thumb,
+      &:nth-child(6) .project-card__thumb {
         aspect-ratio: 1/1;
       }
 
-      &:nth-child(2) .project-card__thumb {
+      &:nth-child(2) .project-card__thumb,
+      &:nth-child(5) .project-card__thumb {
         aspect-ratio: 4/5;
       }
     }
   }
+}
+
+.pagination{
+  text-align: center;
+  margin-top: 1.5rem;
 }
