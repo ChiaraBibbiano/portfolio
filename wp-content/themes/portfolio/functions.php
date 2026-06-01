@@ -102,7 +102,17 @@ function allow_svg_upload( $mimes ) {
 add_filter( 'upload_mimes', 'allow_svg_upload' );
 
 
+/*// Activer la traduction pour le CPT project
+add_filter('pll_get_post_types', function($post_types) {
+    $post_types['project'] = 'project';
+    return $post_types;
+});
 
+// Activer la traduction pour la taxonomie type
+add_filter('pll_get_taxonomies', function($taxonomies) {
+    $taxonomies['type'] = 'type';
+    return $taxonomies;
+});*/
 
 
 
