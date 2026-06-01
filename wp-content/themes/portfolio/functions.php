@@ -56,12 +56,12 @@ function dw_asset(string $filename): string
 }
 
 //charger les traductions existantes
-load_theme_textdomain('hepl-trad', get_template_directory() . '/locales');
+load_theme_textdomain('portfolio-trad', get_template_directory() . '/locales');
 
 // Fonction pour les chaînes de traduction personnalisées
 function __hepl(string $translation): ?string
 {
-    return __($translation, 'hepl-trad');
+    return __($translation, 'portfolio-trad');
 }
 
 add_theme_support('post-thumbnails');

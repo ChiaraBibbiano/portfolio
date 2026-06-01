@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thème DW 202\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/dw\n"
-"POT-Creation-Date: 2026-03-20 10:17+0100\n"
+"POT-Creation-Date: 2026-06-02 00:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,42 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: archive-formation.php:51 index.php:5 search.php:7
-#: templates/components/cards-formation/cards-formation.php:102
+#: 404.php:9
+msgid "Page non trouvée"
+msgstr ""
+
+#: 404.php:13
+msgid "Désolé, la page que vous recherchez n'existe pas ou a été déplacée."
+msgstr ""
+
+#: 404.php:18
+msgid "Vers la page d'accueil"
+msgstr ""
+
+#: 404.php:19
+msgid "Retour à la page d'accueil"
+msgstr ""
+
+#: index.php:5
 msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: template-projects.php:84
+msgid "Aucun projet trouvé."
+msgstr ""
+
+#: template-projects.php:93
+msgid "Vers la page précédente"
+msgstr ""
+
+#: template-projects.php:93
+msgid "<span class=\"link\">Précédent</span>"
+msgstr ""
+
+#: template-projects.php:96
+msgid "Vers la page suivante"
+msgstr ""
+
+#: template-projects.php:96
+msgid "<span class=\"link\">Suivant</span>"
 msgstr ""

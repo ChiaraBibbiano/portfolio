@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thème DW 202\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/dw\n"
-"POT-Creation-Date: 2026-03-20 10:18+0100\n"
-"PO-Revision-Date: 2026-03-20 10:49+0100\n"
+"POT-Creation-Date: 2026-06-02 00:25+0200\n"
+"PO-Revision-Date: 2026-06-02 00:27+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -19,7 +19,84 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: archive-formation.php:51 index.php:5 search.php:7
-#: templates/components/cards-formation/cards-formation.php:102
+#: 404.php:9
+msgid "Page non trouvée"
+msgstr "Page not found"
+
+#: 404.php:13
+msgid "Désolé, la page que vous recherchez n'existe pas ou a été déplacée."
+msgstr "Sorry, the page you are looking for does not exist or has been moved."
+
+#: 404.php:18
+msgid "Vers la page d'accueil"
+msgstr "Back to the home page"
+
+#: 404.php:19
+msgid "Retour à la page d'accueil"
+msgstr "Back to the home page"
+
+#: footer.php:11
+msgid "Coordonnées"
+msgstr "Contact details"
+
+#: footer.php:17
+msgid "Belgique"
+msgstr "Belgium"
+
+#: footer.php:22
+msgid "Navigation"
+msgstr "Navigation"
+
+#: footer.php:35
+msgid "Suivez-moi"
+msgstr "Follow me"
+
+#: footer.php:54
+msgid "Tous droits réservés."
+msgstr "All rights reserved."
+
+#: footer.php:59
+msgid "Mentions légales"
+msgstr "Legal Notice"
+
+#: index.php:5
 msgid "Sorry, no posts matched your criteria."
-msgstr ""
+msgstr "Sorry, no posts matched your criteria."
+
+#: template-projects.php:49
+msgid "Filtrer les projets"
+msgstr "Filter projects"
+
+#: template-projects.php:52
+msgid "Tout"
+msgstr "All"
+
+#: template-projects.php:89
+msgid "Aucun projet trouvé."
+msgstr "No projects found."
+
+#: template-projects.php:94
+msgid "Navigation entre les pages"
+msgstr "Page navigation"
+
+#: template-projects.php:95
+msgid "Vers la page précédente"
+msgstr "Back to the previous page"
+
+#: template-projects.php:97
+msgid "← Précédent"
+msgstr "← Previous"
+
+#: template-projects.php:101
+msgid "Vers la page suivante"
+msgstr "Go to the next page"
+
+#: template-projects.php:103
+msgid "Suivant →"
+msgstr "Next →"
+
+#~ msgid "<span class=\"link\">Précédent</span>"
+#~ msgstr "<span class=\"link\">Previous</span>"
+
+#~ msgid "<span class=\"link\">Suivant</span>"
+#~ msgstr "<span class=\"link\">Next</span>"
