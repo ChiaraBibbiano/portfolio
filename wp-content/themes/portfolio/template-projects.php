@@ -88,12 +88,12 @@ get_header(); ?>
 
     <!--PAGINATION-->
     <?php if ($projects->max_num_pages > 1) : ?>
-        <nav class="pagination link" aria-label="Navigation entre les pages">
+        <nav class="pagination " aria-label="Navigation entre les pages">
             <div class="pagination__prev"
-                 title="<?= __hepl('Vers la page précédente') ?>"><?= get_previous_posts_link(__hepl('← Précédent'), $projects->max_num_pages); ?>
+                 title="<?= __hepl('Vers la page précédente') ?>"><?= get_previous_posts_link(__hepl('<span class="link">Précédent</span>'), $projects->max_num_pages); ?>
             </div>
-            <div class="pagination__next"
-                 title="<?= __hepl('Vers la page suivante') ?>"><?= get_next_posts_link(__hepl('Suivant →'), $projects->max_num_pages); ?>
+            <div class="pagination__next "
+                 title="<?= __hepl('Vers la page suivante') ?>"><?= get_next_posts_link(__hepl('<span class="link">Suivant</span>'), $projects->max_num_pages); ?>
             </div>
         </nav>
     <?php endif; ?>
