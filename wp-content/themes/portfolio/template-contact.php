@@ -22,7 +22,7 @@ $contact_mail = get_field('contact_mail');
         </div>
         <div class="contact__body">
             <div class="contact__coords">
-                <h2 class="contact__coords-title">MES COORDONNÉES</h2>
+                <h2 class="contact__coords-title"><?= __hepl('MES COORDONNÉES'); ?></h2>
                 <address class="contact__address">
                     <?php if (!empty($phone_number['url'])) : ?>
                         <a class="contact__coords-link" href="<?= esc_url($phone_number['url']); ?>">
@@ -44,14 +44,21 @@ $contact_mail = get_field('contact_mail');
                         </a>
                     <?php endif; ?>
 
-                    <span class="contact__coords-text">Belgique</span>
+                    <span class="contact__coords-text"><?= __hepl('Belgique'); ?></span>
 
                 </address>
             </div>
 
             <!--  FORMULAIRE CF7 -->
+            <?php
+            $lang = pll_current_language();
+            $shortcode = ($lang === 'en')
+                    ? '[contact-form-7 id="TON-ID-EN" title="Contact form EN"]'
+                    : '[contact-form-7 id="cf9f391" title="Formulaire de contact FR"]';
+            ?>
+
             <div class="contact__form-wrap">
-                <?= do_shortcode('[contact-form-7 id="cf9f391" title="Formulaire de contact 1"]'); ?>
+                <?= do_shortcode($shortcode); ?>
             </div>
 
         </div>
