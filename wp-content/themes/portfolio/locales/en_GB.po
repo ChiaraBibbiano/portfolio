@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thème DW 202\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/dw\n"
-"POT-Creation-Date: 2026-06-02 00:25+0200\n"
-"PO-Revision-Date: 2026-06-02 00:27+0200\n"
+"POT-Creation-Date: 2026-06-02 00:57+0200\n"
+"PO-Revision-Date: 2026-06-02 00:58+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -39,7 +39,7 @@ msgstr "Back to the home page"
 msgid "Coordonnées"
 msgstr "Contact details"
 
-#: footer.php:17
+#: footer.php:17 template-contact.php:47
 msgid "Belgique"
 msgstr "Belgium"
 
@@ -63,6 +63,10 @@ msgstr "Legal Notice"
 msgid "Sorry, no posts matched your criteria."
 msgstr "Sorry, no posts matched your criteria."
 
+#: template-contact.php:25
+msgid "MES COORDONNÉES"
+msgstr "MY CONTACT DETAILS"
+
 #: template-projects.php:49
 msgid "Filtrer les projets"
 msgstr "Filter projects"
@@ -84,16 +88,16 @@ msgid "Vers la page précédente"
 msgstr "Back to the previous page"
 
 #: template-projects.php:97
-msgid "← Précédent"
-msgstr "← Previous"
+msgid "Précédent"
+msgstr "Previous"
 
 #: template-projects.php:101
 msgid "Vers la page suivante"
 msgstr "Go to the next page"
 
 #: template-projects.php:103
-msgid "Suivant →"
-msgstr "Next →"
+msgid "Suivant"
+msgstr "Next "
 
 #~ msgid "<span class=\"link\">Précédent</span>"
 #~ msgstr "<span class=\"link\">Previous</span>"
